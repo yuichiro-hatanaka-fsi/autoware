@@ -116,7 +116,7 @@ simulations:
       deployment:
         type: container
         artifact: main
-    runtime:
+      runtime:
         type: gpu1/amd64/large
     pre_tasks:
         exec: source /home/autoware/autoware.proj/install/setup.bash && ros2 launch lidar_centerpoint lidar_centerpoint.launch.xml model_name:=centerpoint_tiny model_path:=/home/autoware/autoware_data/lidar_centerpoint model_param_path:=$(ros2 pkg prefix lidar_centerpoint --share)/config/centerpoint_tiny.param.yaml build_only:=true
